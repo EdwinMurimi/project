@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import Navbar from './components/Navbar';
 import AuthContainer from './components/AuthContainer'
 import HomeContainer from './components/HomeContainer'
