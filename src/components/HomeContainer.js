@@ -1,11 +1,19 @@
 import React from 'react';
 import PricesComponent from './PricesComponent';
 import SellersComponent from './SellersComponent';
+import { useAuth } from '../contexts/AuthContext';
 
 
 const HomeContainer = ()=> {
+
+  const { currentUser } = useAuth();
+
+  console.log(currentUser)
+
   return (
     <>
+      <h5 className="container mt-3">Hello, <strong>{currentUser.displayName === null ? currentUser.email : currentUser.displayName}</strong></h5>
+
       <div style={{ display: 'flex', height: '70px', alignItems: 'center', justifyContent: 'center' }} className="container">
         <ul style={{ width: '100%', margin: 'auto' }} className="nav nav-pills mb-3" id="pills-tab" role="tablist">
           <li style={{ flex: 1 }} className="nav-item" role="presentation">

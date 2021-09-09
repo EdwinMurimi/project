@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.scss";
-import { Login, Register } from "./login/index";
+import { Login, Register } from "./login";
 
 class AuthContainer extends React.Component {
   constructor(props) {
